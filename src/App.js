@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { tenureData } from "./utils/tenuredata";
 import TextInput from "./components/text-input.jsx";
 import SliderInput from "./components/slider-input.jsx";
+import { getCLS, getFID, getLCP } from 'web-vitals';
 
 function App() {
   const [cost, setCost] = useState();
