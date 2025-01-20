@@ -4,6 +4,7 @@ import { tenureData } from "./utils/tenuredata";
 import TextInput from "./components/text-input.jsx";
 import SliderInput from "./components/slider-input.jsx";
 import { getCLS, getFID, getLCP } from 'web-vitals';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const [cost, setCost] = useState();
@@ -80,6 +81,7 @@ function App() {
 
   return (
     <>
+    <SpeedInsights/>
     <div className="container">
   <div className="emi">EMI Calculator</div>
 
@@ -148,6 +150,7 @@ function App() {
   <div className='credit'><h6>made by harshit chaudhary</h6></div>
 </div>
 </>
+
   );
 }
 
