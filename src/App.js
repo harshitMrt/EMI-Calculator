@@ -5,6 +5,7 @@ import TextInput from "./components/text-input.jsx";
 import SliderInput from "./components/slider-input.jsx";
 import { getCLS, getFID, getLCP } from 'web-vitals';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import Description from './components/description.jsx';
 
 function App() {
   const [cost, setCost] = useState();
@@ -147,8 +148,9 @@ function App() {
       </button>
     ))}
   </div>
-  <div className='credit'><h6>made by harshit chaudhary</h6></div>
+  
 </div>
+<Description/>
 </>
 
   );
