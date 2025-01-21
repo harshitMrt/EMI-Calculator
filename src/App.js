@@ -91,6 +91,7 @@ function App() {
       title="Total Cost of Asset"
       state={cost}
       setState={setCost}
+      setDP={setDownPayment}
     />
   </div>
 
@@ -148,7 +149,7 @@ function App() {
       </button>
     ))}
   </div>
-  
+
 </div>
 <Description/>
 </>
