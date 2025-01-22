@@ -6,6 +6,7 @@ import SliderInput from "./components/slider-input.jsx";
 import { getCLS, getFID, getLCP } from 'web-vitals';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import Description from './components/description.jsx';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [cost, setCost] = useState();
@@ -83,6 +84,7 @@ function App() {
   return (
     <>
     <SpeedInsights/>
+    <Analytics
     <div className="container">
   <div className="emi">EMI Calculator</div>
 
