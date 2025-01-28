@@ -1,12 +1,9 @@
 import './App.css';
 import { useEffect, useState } from "react";
-import { tenureData } from "./utils/tenuredata";
 import TextInput from "./components/text-input.jsx";
 import SliderInput from "./components/slider-input.jsx";
-import { getCLS, getFID, getLCP } from 'web-vitals';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import Description from './components/description.jsx';
-import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [cost, setCost] = useState();
@@ -30,6 +27,7 @@ function App() {
 
     return Number(EMI / 12).toFixed(0);
   };
+
 
   const calculateDP = (emi) => {
     if (!cost) return;
@@ -84,7 +82,6 @@ function App() {
   return (
     <>
     <SpeedInsights/>
-    <Analytics
     <div className="container">
   <div className="emi">EMI Calculator</div>
 
@@ -138,21 +135,20 @@ function App() {
       labelMax="100%"
     />
   </div>
-
   <div className="title-tenure">Tenure (in Months)</div>
-  <div className="tenure">
-    {tenureData.map((t) => (
-      <button
-        key={t}
-        className={`tenure ${t === tenure ? "tenure__selected" : ""}`}
-        onClick={() => setTenure(t)}
-      >
-        {t}
-      </button>
-    ))}
-  </div>
+  <div className='tenure-input'>
+        <input
 
-</div>
+        type="number"
+        value={tenure}
+        onChange={(e) => {
+          const tenure=Number(e.target.value)
+          setTenure(e.target.value) 
+          }}
+        placeholder="Tenure (in Months)"
+      ></input>
+      </div>
+  </div>
 <Description/>
 </>
 
