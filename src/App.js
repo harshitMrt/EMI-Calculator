@@ -118,8 +118,8 @@ function App() {
       state={downPayment}
       min={0}
       max={cost}
-      labelMin="0%"
-      labelMax="100%"
+      // labelMin="0%"
+      // labelMax="100%"
     />
   </div>
 
@@ -131,14 +131,13 @@ function App() {
       state={emi}
       min={0}
       max={calculateEMI(0)}
-      labelMin="0%"
-      labelMax="100%"
+      // labelMin="0%"
+      // labelMax="100%"
     />
   </div>
   <div className="title-tenure">Tenure (in Months)</div>
   <div className='tenure-input'>
         <input
-
         type="number"
         value={tenure}
         onChange={(e) => {
