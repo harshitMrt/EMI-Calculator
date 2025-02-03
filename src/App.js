@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from "react";
 import TextInput from "./components/text-input.jsx";
 import SliderInput from "./components/slider-input.jsx";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Description from './components/description.jsx';
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
 
   return (
     <>
+    <SpeedInsights/>
     <div className="container">
   <div className="emi">EMI Calculator</div>
 
